@@ -1,6 +1,5 @@
-#include<stdio.h>
-#include<unistd.h>
-#include<stdlib.h>
+#include<bits/stdc++.h>
+using namespace std;
 #include<pthread.h>
 
 void *thread_fun(void *arg);
