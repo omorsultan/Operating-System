@@ -11,7 +11,7 @@ int main()
 	void *sum_p;
 	pthread_join(thread1,&sum_p);
 	
-	printf("Back to main process\n");
+	printf("\nBack to main process\n");
 	int *sum = (int *)sum_p;
 	printf("Sum of elements: %d\n", *sum);
 	return 0;

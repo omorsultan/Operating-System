@@ -9,17 +9,7 @@ struct thread_data
     int end;
 };
 
-void *partial_sum(void *arg) {
-    int sum=0;
-    thread_data *data = (thread_data *)arg;
-    for(int i=data->start;i<data->end;i++)
-    {
-        sum+=data->array[i];
-    }
-    int *sum_ptr = new int(sum);
-    return (void *)sum_ptr;
-}
-
+void* partial_sum(void* arg);
 
 int main()
 {
@@ -44,14 +34,12 @@ int main()
     pthread_create(&thread2, NULL, partial_sum, (void *)&data2);
 
     void* sum1, *sum2;
-    int* sum_first_half;
-    int* sum_second_half;
-
+ 
     pthread_join(thread1, &sum1);
     pthread_join(thread2, &sum2);
 
-    sum_first_half = (int*)sum1;
-    sum_second_half = (int*)sum2;
+    int* sum_first_half = (int*)sum1;
+    int* sum_second_half = (int*)sum2;
 
     cout<<"Sum of first half: "<<*sum_first_half<<endl;
     cout<<"Sum of second half: "<<*sum_second_half<<endl;
@@ -59,4 +47,14 @@ int main()
 
     delete sum_first_half;
     delete sum_second_half;
+}
+void *partial_sum(void *arg) {
+    int sum=0;
+    thread_data *data = (thread_data *)arg;
+    for(int i=data->start;i<data->end;i++)
+    {
+        sum+=data->array[i];
+    }
+    int *sum_ptr = new int(sum);
+    return (void *)sum_ptr;
 }

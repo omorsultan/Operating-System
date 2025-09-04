@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<unistd.h>
+#include<bits/stdc++.h>
+using namespace std;
 #include<pthread.h>
 void *thread_fun(void *arg);
 int main()
@@ -7,6 +7,7 @@ int main()
 	pthread_t thread1;
 	pthread_create(&thread1,NULL,thread_fun,NULL);
 	pthread_join(thread1,NULL);
+	
 	printf("Back to main process\n");
 	for(int i=15;i<20;i++)
 	{
