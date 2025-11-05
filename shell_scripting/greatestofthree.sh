@@ -3,7 +3,7 @@ read a
 read b
 read c
 
-if [[ $a -ge $b && $a -ge $c ]] then
+if [[ $a -ge $b && $a -ge $c ]] ; then
     echo "$a is the greatest 👍"
 
 elif [[ $b -ge $a && $b -ge $c ]]
