@@ -1,0 +1,4 @@
+Hello World 
+write ?
+/bin/bash "/home/omor/os/File_management/file.sh"
+
