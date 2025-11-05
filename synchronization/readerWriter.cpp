@@ -50,13 +50,11 @@ void writer(int id) {
 int main() {
     thread readers[3], writers[2];
 
-    // Create threads
     for (int i = 0; i < 3; i++)
         readers[i] = thread(reader, i + 1);
     for (int i = 0; i < 2; i++)
         writers[i] = thread(writer, i + 1);
 
-    // Join threads
     for (int i = 0; i < 3; i++)
         readers[i].join();
     for (int i = 0; i < 2; i++)
