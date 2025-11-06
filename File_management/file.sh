@@ -1,5 +1,5 @@
 #!/bin/bash
-# touch newfile.txt
+touch newfile.txt
 # touch oldfile.txt
 # touch backupfile.txt
 
