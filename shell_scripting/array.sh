@@ -8,7 +8,7 @@ fruits=("Apple" "Banana" "orrange")
 
 fruits[2]="Tarmuj"
 fruits+=("Anar")
-for i in "${!fruits[@]}"; 
+for i in "${!fruits[@]}";
 do
     echo "${fruits[$i]}"
 done
