@@ -1,7 +1,4 @@
-#include <iostream>
-#include <thread>
-#include <mutex>
-#include <chrono>
+#include<bits/stdc++.h>
 using namespace std;
 
 const int NUM_PHILOSOPHERS = 5;

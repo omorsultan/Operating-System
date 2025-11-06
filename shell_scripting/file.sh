@@ -4,7 +4,7 @@
 file=/home/omor/os/a.cpp
 
 if [[ -e "$file" ]]; then
-    # echo "$file exists."
+    echo "$file exists."
 
     [ -r "$file" ] && echo "Readable"
     [ -w "$file" ] && echo "Writable"

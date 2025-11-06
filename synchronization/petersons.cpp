@@ -1,7 +1,4 @@
-#include <iostream>
-#include <thread>
-#include <atomic>
-#include <chrono>
+#include<bits/stdc++.h>
 using namespace std;
 
 atomic<bool> flag[2];  // indicates if process wants to enter critical section

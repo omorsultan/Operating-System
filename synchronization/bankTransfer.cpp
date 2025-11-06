@@ -1,6 +1,4 @@
-#include <iostream>
-#include <thread>
-#include <chrono>
+#include<bits/stdc++.h>
 using namespace std;
 
 int accountA = 500; // Initial balance of account A

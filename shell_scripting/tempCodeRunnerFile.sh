@@ -1,7 +1,5 @@
-#!/bin/bash
-
-# # Read directory from user
-read -p "Enter directory path: " dir
+ectory from user
+# read -p "Enter directory path: " dir
 
 # # Check if directory exists
 # if [ ! -d "$dir" ]; then
@@ -10,5 +8,4 @@ read -p "Enter directory path: " dir
 # fi
 
 # # List all files recursively
-# echo "Listing all files recursively in $dir:"
-find "$dir" -type f
+# echo "Listing all files recu
